@@ -1,0 +1,346 @@
+/* HomePage.css */
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.paper {
+  background-color: whitesmoke; 
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+  width: 500px;
+  height: 500px;
+  max-width: 80%;
+  margin-top: 5px;
+}
+
+#logo-image {
+  max-width: 100%;
+  height: 20px;
+}
+
+.home-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 50px; 
+}
+
+.custom-button {
+  background-color: #358f80; 
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.custom-button:hover {
+  background-color: #56ab91; 
+}
+
+
+/* NavigationBar.css */
+
+.navigations {
+  background-color: #14746f;
+}
+
+.app-bar {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 10px;
+}
+
+.left-section {
+  display: flex; 
+  align-items: center;
+}
+
+.right-section {
+  display: flex; 
+}
+
+#logo-image {
+  margin-right: 20px;
+}
+
+.typography {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+/* Books.css */
+
+.nav-bar {
+  background-color: #a5c5c182;
+  color: #fff;
+  display: flex; 
+  justify-content: space-between; 
+  padding: 10px;
+  text-align: left;
+  font-size: 7px;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.search-bar {
+  display: flex; 
+  align-items: center; 
+  margin-top: 10px;
+  padding: 3px;
+}
+
+/* Books List Styles */
+.books-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; 
+}
+
+.book-card {
+  background-color: whitesmoke;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+  width: 250px;
+  margin: 10px;
+}
+
+.book-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.book-details {
+  margin-top: 10px;
+}
+
+.book-title {
+  font-weight: bold;
+}
+
+.book-author {
+  margin-top: 5px;
+}
+
+.details-link {
+  text-decoration: none;
+  display: block;
+  margin-top: 10px;
+}
+
+.see-details-button {
+  background-color: #358f80;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.see-details-button:hover {
+  background-color: #56ab91;
+}
+
+
+
+/* Login.css */
+
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  height: 40vh;
+}
+
+.container {
+  background-color: #bfd8d852;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+  margin: 0 auto; 
+}
+
+h2 {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #358f80;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+button:hover {
+  background-color: #56ab91;
+}
+
+
+/* RegistrationForm.css */
+
+.registration-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 40vh;
+}
+
+.container {
+  background-color: #bfd8d852;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  height: 400px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+h2 {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #358f80;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+button:hover {
+  background-color: #56ab91;
+}
+
+/* SingleBook.css */
+
+.single-book {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.single-card {
+  background-color: whitesmoke;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 350px;
+  padding: 30px; 
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-container {
+  width: 200px; 
+  height: 300px; 
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.single-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.book-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.book-author {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+.checkout-link {
+  text-decoration: none;
+}
+
+.checkout-button {
+  background-color: #358f80;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 20px; 
+}
+
+.checkout-button:hover {
+  background-color: #56ab91;
+}
