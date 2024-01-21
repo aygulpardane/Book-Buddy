@@ -18,12 +18,10 @@ const HomePage = () => {
         </div>
       <div className="home">
         <div className="paper">
-          <p>Welcome to our online Book Buddy Library</p>
-          <p>MORE INFO</p>
+          <h3>Welcome to our online Book Buddy Library</h3>
+          <p>You can use our online library platform to search books, view their details, and create an account to check out books in your name.</p>
         </div>
       </div>
-
-
     </div>
   );
 };

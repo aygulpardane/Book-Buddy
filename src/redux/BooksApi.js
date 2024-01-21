@@ -9,10 +9,12 @@ const booksApi = createApi({
     fetchBooks: builder.query({
       query: () => `books`,
       providesTags: ['Book'],
+      invalidatesTags: ['Book']
     }),
     fetchSingleBook: builder.query({
       query: (bookId) => `books/${bookId}`,
       providesTags: ['Book'],
+      invalidatesTags: ['Book']
     }),
 
     fetchUser: builder.query({
@@ -22,6 +24,7 @@ const booksApi = createApi({
           Authorization: `Bearer ${variables.token}`,
         },
       }),
+      invalidatesTags: ['Users']
     }),
 
     fetchReservations: builder.query({
@@ -31,6 +34,7 @@ const booksApi = createApi({
           Authorization: `Bearer ${variables.token}`,
         },
       }),
+      invalidatesTags: ['Reservation']
     }),
 
     register: builder.mutation({
@@ -38,7 +42,8 @@ const booksApi = createApi({
         url: 'users/register',
         method: "POST",
         body: user
-      })
+      }),
+      invalidatesTags: ['Users']
     }),
 
     login: builder.mutation({
@@ -46,7 +51,8 @@ const booksApi = createApi({
         url: 'users/login',
         method: "POST",
         body: user
-      })
+      }),
+      invalidatesTags: ['Users']
     }),
 
     checkoutBook: builder.mutation({
@@ -64,13 +70,14 @@ const booksApi = createApi({
     }),
 
     removeRes: builder.mutation({
-      query: ({resId}, variables) => ({
+      query: ({resId, token}) => ({
         url: `reservations/${resId}`,
         method: "DELETE",
         headers: {
-          Authorization: `Bearer ${variables.token}`,
+          Authorization: `Bearer ${token}`,
         }
-      })
+      }),
+      invalidatesTags: ['Reservations']
     }),
   }),
 });

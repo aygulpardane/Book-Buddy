@@ -1,5 +1,4 @@
-
-import React from "react";
+import React, {useState} from "react";
 import { useFetchUserQuery, useFetchReservationsQuery, useRemoveResMutation } from '../redux/BooksApi';
 import { useSelector } from 'react-redux';
 import Button from '@mui/material/Button';
@@ -7,9 +6,8 @@ import { useNavigate } from "react-router-dom";
 
 const Profile = () => {
     const token = useSelector((state) => state.token);
-
-    const { data, error, isLoading } = useFetchUserQuery({ token });
     const resData = useFetchReservationsQuery({ token });
+    const { data, error, isLoading } = useFetchUserQuery({ token });
     const navigate = useNavigate();
 
     const [returnBook] = useRemoveResMutation();
@@ -20,6 +18,8 @@ const Profile = () => {
 
         const result = await returnBook({ resId, token });
         console.log(result);
+        await resData.refetch();
+        console.log(resData);
 
       } catch (error) {
         console.error(error);
@@ -27,7 +27,6 @@ const Profile = () => {
 
       navigate('/profile');
     };
-
 
     if (isLoading || resData.isLoading) {
         return <p>Loading...</p>;

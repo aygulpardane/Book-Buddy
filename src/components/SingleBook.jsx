@@ -1,5 +1,9 @@
-import React from 'react';
-import { useFetchSingleBookQuery, useCheckoutBookMutation } from '../redux/BooksApi';
+import React, {useState} from 'react';
+import {
+    useFetchSingleBookQuery,
+    useCheckoutBookMutation,
+    useFetchReservationsQuery
+} from '../redux/BooksApi';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
@@ -10,6 +14,8 @@ const SingleBook = () => {
     const navigate = useNavigate();
 
     const [checkoutBook] = useCheckoutBookMutation();
+    const resData = useFetchReservationsQuery({ token });
+    const [reservation, setReservation] = useState();
 
     const handleCheckout = async (e) => {
       e.preventDefault();
@@ -22,6 +28,13 @@ const SingleBook = () => {
           }
 
         const result = await checkoutBook({bookId: id, token, isAvailable: false});
+        console.log(result);
+
+        await resData.refetch();
+
+        const checkedOutBook = result.data;
+
+        setReservation(checkedOutBook);
 
       } catch (error) {
         console.error(error);
